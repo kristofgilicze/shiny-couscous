@@ -1,6 +1,7 @@
 import requests
 import pprint
 
+
 TODO_API_URL = "https://jsonplaceholder.cypress.io/todos"
 
 def fetch_todos():
@@ -11,23 +12,25 @@ def fetch_todos():
 
 
 if __name__ == "__main__":
-    todos = fetch_todos()
-    #print(todos[0])
 
-def todoSort():
-    groupTodos = {}
-    for todo in todos:
-        id = todo["userId"]
-        if id not in groupTodos:
-            groupTodos[id] = []
-        groupTodos[id].append(todo)
-    return groupTodos
+  todos = fetch_todos()
+  #print(todos[0])
 
-todos = todoSort()
+  def todoSort():
+      groupTodos = {}
+      for todo in todos:
+          id = todo["userId"]
+          if id not in groupTodos:
+              groupTodos[id] = []
+          groupTodos[id].append(todo)
+      return groupTodos
 
-def fancy_print(id, todos):
-    todo_list = todos[id]
-    for todo in todo_list:
-        pprint.pprint(todo)
+  todos = todoSort()
 
-fancy_print(3, todos)
+  def fancy_print(id, todos):
+      todo_list = todos[id]
+      for todo in todo_list:
+          pprint.pprint(todo)
+
+  fancy_print(3, todos)
+
