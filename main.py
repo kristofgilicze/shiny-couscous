@@ -11,5 +11,5 @@ def fetch_todos():
 
 if __name__ == "__main__":
     r = fetch_todos()
-    print(r)
+    print(r[0])
     
