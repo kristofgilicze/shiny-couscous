@@ -1,0 +1,4 @@
+- [] 1. do api call to: https://jsonplaceholder.cypress.io/todos
+- [] 2. fetch all todos
+- [] 3. group by user id
+- [] 4 pretty print todo for given userId
