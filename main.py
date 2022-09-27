@@ -3,10 +3,13 @@ import requests
 TODO_API_URL = "https://jsonplaceholder.cypress.io/todos"
 
 def fetch_todos():
-    response = requests.get(url)        
+    response = requests.get(TODO_API_URL)        
     parsed = response.json()
+    return parsed
 
-fetch_todos(TODO_API_URL)
+
 
 if __name__ == "__main__":
-    print(requests.headers())
+    r = fetch_todos()
+    print(r)
+    
