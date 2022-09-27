@@ -1,4 +1,5 @@
 import requests
+import pprint
 
 TODO_API_URL = "https://jsonplaceholder.cypress.io/todos"
 
@@ -27,6 +28,6 @@ todos = todoSort()
 def fancy_print(id, todos):
     todo_list = todos[id]
     for todo in todo_list:
-        print(todo)
+        pprint.pprint(todo)
 
 fancy_print(3, todos)
