@@ -9,4 +9,4 @@ def fetch_todos():
 fetch_todos(TODO_API_URL)
 
 if __name__ == "__main__":
-    print(r.headers())
+    print(requests.headers())
