@@ -10,6 +10,23 @@ def fetch_todos():
 
 
 if __name__ == "__main__":
-    r = fetch_todos()
-    print(r[0])
-    
+    todos = fetch_todos()
+    #print(todos[0])
+
+def todoSort():
+    groupTodos = {}
+    for todo in todos:
+        id = todo["userId"]
+        if id not in groupTodos:
+            groupTodos[id] = []
+        groupTodos[id].append(todo)
+    return groupTodos
+
+todos = todoSort()
+
+def fancy_print(id, todos):
+    todo_list = todos[id]
+    for todo in todo_list:
+        print(todo)
+
+fancy_print(3, todos)
