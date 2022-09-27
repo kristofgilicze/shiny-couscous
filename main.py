@@ -1,7 +1,10 @@
 import requests
 
-r=requests.get("https://jsonplaceholder.cypress.io/todos")
-r.json()
 
-print(r.headers)
 
+def parser(url):
+    response = requests.get(url)        
+    parsed = response.json()
+    print(parsed[0])
+
+parser("https://jsonplaceholder.cypress.io/todos")
